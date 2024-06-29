@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#DB0000" />
+    <meta
+      name="description"
+      content="RestoWeb - Find the best Restaurant near you."
+    />
+    <link rel="manifest" href="./app.webmanifest" />
+    <link rel="icon" href="/src/public/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <title>Restaurant Apps</title>
+  </head>
+  <body>
+    <a href="#mainContent" class="skip-content" tabindex="0">Skip to Content</a>
+    <header class="app-bar">
+      <div class="app-bar__menu">
+        <button id="hamburgerButton" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
+      </div>
+      <div class="app-bar__brand">
+        <h1>RestoWeb</h1>
+      </div>
+      <!-- Navbar -->
+      <nav id="navigationDrawer" class="app-bar__navigation">
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#like">Liked Resto</a></li>
+          <li>
+            <a
+              href="https://www.instagram.com/kadirunsimbala?igsh=MXVjc3ptNHRteHdwOA=="
+              target="_blank"
+              >About Us</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <!-- Hero -->
+    </header>
+    <div class="hero">
+      <div class="text">
+        <p><strong>Welcome to RestoWeb</strong></p>
+        <p>Find the best Restaurant near you.</p>
+      </div>
+    </div>
+    <main>
+      <div tabindex="0" class="card-container" id="mainContent"></div>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer">
+          <p>Copyright &#169; 2024 - RestoWeb</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

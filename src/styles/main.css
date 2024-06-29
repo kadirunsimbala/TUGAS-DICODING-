@@ -1,0 +1,387 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* skip konten */
+
+.skip-content {
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  color: var(--third-color);
+  font-weight: 500;
+  left: 0;
+  line-height: 44px;
+  margin: 0 auto;
+  padding: 0 10px;
+  position: absolute;
+  right: 0;
+  top: -50px;
+  transition: 0.35s;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  z-index: 1500;
+}
+
+.skip-content:focus {
+  top: 30px;
+}
+
+/* app bar */
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar__menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 12px;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.app-bar .app-bar__brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar__brand h1 {
+  color: #db0000;
+  text-transform: uppercase;
+  font-size: 22px;
+  user-select: none;
+}
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.app-bar .app-bar__navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 100%;
+  min-width: 44px;
+  min-height: 44px;
+}
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../public/images/heros/hero-image_3.jpg");
+  width: 100%;
+  height: 400px;
+  align-self: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-size: 1.4rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+/* main */
+
+main {
+  padding: 32px;
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}
+
+/* main page card */
+
+.restoran {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 32px 0;
+}
+
+/* card tempalate  */
+.resto {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-img img.load {
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+.card-img .city-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 10px;
+  background-color: #fff;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.rating i {
+  color: #f39c12;
+  margin-right: 5px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-title a {
+  color: #333;
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  padding: 8px;
+}
+
+.card-title a:hover {
+  text-decoration: underline;
+}
+
+.card-text {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* card detail */
+
+/* Style for restaurant detail */
+.detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail .title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail img.lazyload {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.detail .info {
+  margin-bottom: 20px;
+}
+
+.detail .info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail .info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.detail .info ul li {
+  margin-bottom: 10px;
+}
+
+.detail .info ul li h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.detail .info ul li p {
+  margin: 0;
+  color: #333;
+}
+
+.detail .overview {
+  margin-bottom: 20px;
+}
+
+.detail .overview h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detail .overview p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* customer review */
+.customer-reviews {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.customer-reviews h2 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.customer-reviews ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.customer-reviews li {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.customer-reviews li h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.customer-reviews li p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.customer-reviews li .review-date {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Favorite button */
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Footer styles */
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: rgb(93, 93, 93);
+}
+
+.footer-container .footer p {
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
